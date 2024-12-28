@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background:linear-gradient(to right bottom,black,grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 450px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(105, 98, 98);
+    max-width: 600px;
+    border-radius: 6px;
+    padding: 20px; /* Added padding for better spacing */
+    gap: 10px; /* Increased gap for better visual separation */
+    color: antiquewhite;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px; /* Adjusted margin for better spacing */
+}
+
+.user-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+}
+
+.user-container p {
+    font-size: 1.5rem;
+}
+
+#user-input {
+    padding: 5px;
+    font-size: 1rem;
+    width: 80%; /* Made width 100% for better alignment */
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Added border for input field */
+}
+
+#search-btn {
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer; /* Added cursor pointer for better UX */
+    border: none; /* Removed border */
+}
+
+#search-btn:hover {
+    background-color: rgb(50, 140, 50); /* Darker green on hover */
+}
+
+.user-stats {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 20px; /* Added margin for spacing */
+    flex-wrap: wrap;
+}
+
+.circle {
+    height: 120px;
+    width: 120px;
+    border: rgb(60, 158, 60) 3px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; /* Centered the text */
+    flex-direction: column;
+    align-items: center; /* Centered the text */
+    font-size: 16px;
+    background: conic-gradient(rgb(60, 158, 60) var(--progress--degree, 0%), rgb(37, 65, 37) 0%);
+}
+
+.block{
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Show the user stats when data is available */
+.user-stats.visible {
+    display: flex; /* Change to flex to show the stats */
+}
